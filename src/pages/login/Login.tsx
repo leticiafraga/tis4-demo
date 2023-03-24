@@ -18,6 +18,10 @@ export default function Login() {
     formState: { errors },
   } = useForm<LoginRequest>({
     resolver: yupResolver(loginSchema),
+    defaultValues: {
+      email: "example@example.com",
+      password: "123456",
+    },
   });
 
   async function handleSuccess(data: LoginRequest) {
