@@ -1,0 +1,18 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "./colors.scss";
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $secondary,
+  );
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "bootstrap/scss/bootstrap.scss";
+
+main {
+  padding: 20px;
+}
+
+.btn-primary {
+  color: white;
+}

@@ -1,0 +1,23 @@
+@import "../../colors.scss";
+
+.header {
+  header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  color: #fff !important;
+  background-color: $primary;
+  nav {
+    background-color: $secondary;
+    a {
+      color: #fff !important;
+      text-decoration: none;
+    }
+  }
+}
+
+.sair a {
+  color: #fff;
+  text-decoration: none;
+}
