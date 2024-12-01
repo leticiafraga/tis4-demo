@@ -1,0 +1,16 @@
+.containerLogin {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > div {
+    width: 100%;
+    max-width: 500px;
+  }
+  input {
+    margin-bottom: 1rem;
+  }
+  button {
+    width: 100%;
+  }
+}

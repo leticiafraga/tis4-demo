@@ -1,0 +1,27 @@
+@import "../../colors.scss";
+
+.table {
+  background-color: #ddd;
+  border-radius: 16px;
+  th,
+  td {
+    padding: 8px 12px;
+  }
+  tbody tr:hover {
+    background-color: #ccc;
+  }
+}
+
+.athleteLink {
+  cursor: pointer;
+}
+
+.filter {
+  background-color: $secondary;
+  border-radius: 20px;
+  color: white;
+  padding: 20px 30px;
+  .filter-text {
+    padding: 16px;
+  }
+}

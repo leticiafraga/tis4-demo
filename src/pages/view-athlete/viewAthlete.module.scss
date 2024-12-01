@@ -1,0 +1,36 @@
+@import "../../colors.scss";
+
+.table {
+  background-color: #ddd;
+  border-radius: 16px;
+  padding: 16px;
+  th,
+  td {
+    padding: 8px 12px;
+  }
+  tbody tr:hover {
+    background-color: #ccc;
+  }
+}
+.history {
+  cursor: pointer;
+}
+
+.select {
+  display: inline;
+  width: auto;
+}
+
+canvas {
+  max-height: 500px;
+}
+
+.filter {
+  background-color: $secondary;
+  border-radius: 20px;
+  color: white;
+  padding: 20px 30px;
+  .filter-text {
+    padding: 16px;
+  }
+}
