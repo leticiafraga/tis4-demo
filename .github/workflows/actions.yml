@@ -23,6 +23,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     name: Acceptance tests
+    needs: test
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,7 +44,7 @@ jobs:
 
   deploy:
     name: Deploy
-    needs: test
+    needs: cypress-run
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -70,4 +71,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: build
+          folder: .
