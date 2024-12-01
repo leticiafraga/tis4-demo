@@ -43,7 +43,7 @@ jobs:
           start: npm run dev
 
   deploy:
-    name: Deploy
+    name: Build and Deploy
     needs: cypress-run
     runs-on: ubuntu-latest
     steps:
