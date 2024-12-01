@@ -51,26 +51,22 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
-  smoke-test:
-    runs-on: ubuntu-latest
-    name: Teste de aceitação
-    needs: deploy
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
-    - name: Checkout do repositório
-      uses: actions/checkout@v3
-
-    - name: Instalar Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    - name: Instalar dependências
-      run: npm install
-
-    - name: Aguardar deploy
-      run: |
-        echo "Aguardando 30 segundos para o deploy completar..."
-        sleep 30  # Espera de 30 segundos para o deploy ser finalizado
-
-    - name: Executar Cypress
-      run: npm run cy:run
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm run dev

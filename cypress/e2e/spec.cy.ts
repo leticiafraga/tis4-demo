@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-describe('Smoke Test', () => {
+describe('Acceptance test', () => {
   it('logs in', () => {
-    cy.visit('https://leticiafraga.github.io/tis4-demo',{timeout: 20000})
+    cy.visit('http://localhost:5173',{timeout: 20000})
 
     cy.contains('Entrar',{timeout: 20000}).click()
   })
