@@ -50,3 +50,27 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    name: Teste de aceitação
+    needs: deploy
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v3
+
+    - name: Instalar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Aguardar deploy
+      run: |
+        echo "Aguardando 30 segundos para o deploy completar..."
+        sleep 30  # Espera de 30 segundos para o deploy ser finalizado
+
+    - name: Executar Cypress
+      run: npm run cy:run
