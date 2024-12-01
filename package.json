@@ -6,6 +6,7 @@
   "homepage": "https://leticiafraga.github.io/ti4-demo",
   "scripts": {
     "dev": "vite",
+    "test": "jest",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -17,6 +18,7 @@
     "bootstrap": "^5.2.1",
     "chart.js": "^4.0.1",
     "firebase": "^9.12.1",
+    "jest-environment-jsdom": "^29.7.0",
     "jquery": "^3.6.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.0.0",
@@ -26,15 +28,22 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@types/jest": "^29.5.14",
     "@types/node": "^18.7.18",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^2.1.0",
     "css-loader": "^6.7.1",
     "gh-pages": "^5.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
     "sass": "^1.54.9",
     "style-loader": "^3.3.1",
-    "typescript": "^4.6.4",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5",
     "vite": "^3.1.0"
   }
 }
