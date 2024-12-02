@@ -4,7 +4,7 @@ Este projeto foi desenvolvido para a disciplina “Trabalho Interdisciplinar: ap
 O cliente notou a falta de informação no mercado sobre o desempenho de atletas durante a faixa etária observada — pré-adolescência e adolescência —, dados que seriam valiosos para avaliar o potencial dessas pessoas em competições e em seu rendimento na fase adulta. Visando solucionar esse problema, este trabalho propõe a criação de um software que permita a construção de um banco de dados de informações relacionadas ao perfil antropométrico e desempenho esportivo de adolescentes e pré-adolescentes, bem como análise posterior dessas informações.
 
 Uma versão de teste do projeto está disponível em:
-[https://github.com/leticiafraga/tis4-demo](https://github.com/leticiafraga/tis4-demo)
+[https://tis4-demo.web.app/](https://tis4-demo.web.app/)
 
 ## Instruções de utilização
 
