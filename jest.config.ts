@@ -8,7 +8,8 @@ export default {
     moduleNameMapper: {
         "\\.(gif|ttf|eot|svg|png)$":
             "<rootDir>/src/__mocks__/fileMock.js",
-        "\\.(css|scss)$": "<rootDir>/src/__mocks__/styleMock.js"
+        "\\.(css|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
     },
     moduleDirectories: ["node_modules", "src"],
+    setupFilesAfterEnv: ["<rootDir>/src/__mocks__/setupTests.ts"],
 };

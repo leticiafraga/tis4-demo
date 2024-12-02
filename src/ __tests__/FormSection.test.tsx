@@ -1,14 +1,12 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import FormSection from "../components/form-section/FormSection";
-import Input from "../components/input/Input";
 
 test("Renders the form content", () => {
     const header = "This is the header";
+    const children = "children";
 
-    render(
-        <FormSection header={header}>
-            <Input label="Massa corporal (kg)" disabled value={0} />
-            <Input label="% Gordura corporal" disabled value={0} />
-        </FormSection>
-    );
+    render(<FormSection header={header}>{children}</FormSection>);
+
+    expect(screen.getByText(header)).toBeInTheDocument();
+    expect(screen.getByText(children)).toBeInTheDocument();
 });
