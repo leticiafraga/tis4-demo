@@ -9,4 +9,5 @@ test("Renders the form content", () => {
 
     expect(screen.getByText(header)).toBeInTheDocument();
     expect(screen.getByText(children)).toBeInTheDocument();
+    
 });
